@@ -83,12 +83,12 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/pangy9/CoRe" target="_blank"
+                    <a href="https://pangy9.github.io/CoRe-page/" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code(coming soon)</span>
                   </a>
                 </span>
 
@@ -102,6 +102,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
+
             </div>
           </div>
         </div>
@@ -147,6 +148,7 @@
         <img src="static/images/cosine_similarity_comparison.png" alt="Cosine Similarity Comparison" class="blend-img-background" style="width: 48%;"/>
         <img src="static/images/attnmap.png" alt="Cross Attention Map Visualization" class="blend-img-background" style="width: 48%;"/>
       </div>
+      <br>
       <div class="level-set has-text-justified">
         <p>
           For the four similar prompts (``{} in the desert''), we show the cosine similarity between the output embeddings of each token (left), and the cross-attention map visualization of each token (right). Replacing ``dog'' with ``puppy'' or ``cat'' results in similar output embeddings and attention maps for other tokens. In contrast, using the overfitted S<sup>*</sup> by Textual Inversion significantly alters the output embeddings and attention maps for other tokens. 
@@ -164,14 +166,13 @@
       <h2 class="title is-3">Overview</h2>
       
       <img src="static/images/framework.png" alt="Multi-Stage Finetuning of AttnDreamBooth" class="blend-img-background center-image"/>
+      <br>
+      <br>
       
       <div class="level-set has-text-justified">
         <p>
           Our method enhances the text embedding learning for S<sup>*</sup> by regularizing its context tokens. Specifically, we randomly select a regularization prompt (e.g., ``S<sup>*</sup> in the desert'') and a reference prompt (e.g., ``Dog in the desert'') from the prompt set. During training, the proposed context embedding regularization and context attention regularization are applied together with the diffusion loss, which encourages the representations of the context tokens surrounding S<sup>*</sup> to align with those in the reference prompt. These regularization terms make the text embedding of S<sup>*</sup> more compatible with existing tokens.
         </p>
-        <!-- <br> -->
-        <!-- <p> -->
-          <!-- Furthermore, we introduce a cross-attention map regularization term to enhance the learning of the attention map. Throughout the three training stages, we use a consistent training prompt, ``a photo of a [V] [super-category]'', where [V] and [super-category] denote the tokens for the new concept and its super-category, respectively. Our attention map regularization term encourages similarity between the attention maps of the new concept and its super-category.  -->
         </p>
       </div>
     </div>
