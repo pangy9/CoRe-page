@@ -192,7 +192,7 @@
       <h2 class="title is-3">Overview of the proposed CoRe</h2>
       
       <img src="static/images/framework.png" alt="Multi-Stage Finetuning of AttnDreamBooth" class="blend-img-background center-image"/>
-    
+      
       <div class="level-set has-text-justified">
         <p>
           Our method enhances the text embedding learning for S<sup>*</sup> by regularizing its context tokens. Specifically, we randomly select a regularization prompt (e.g., ``S<sup>*</sup> in the desert'') and a reference prompt (e.g., ``Dog in the desert'') from the prompt set. During training, the proposed context embedding regularization and context attention regularization are applied together with the diffusion loss, which encourages the representations of the context tokens surrounding S<sup>*</sup> to align with those in the reference prompt. These regularization terms make the text embedding of S<sup>*</sup> more compatible with existing tokens.
@@ -203,11 +203,30 @@
         </p>
       </div>
     </div>
-   </div>
- </div>
+  </div>
+</div>
 </section>
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <h2 class="title is-3">Overview of the proposed CoRe</h2>
+      
+      <div class="image-container" style="display: flex; justify-content: space-between;">
+        <img src="static/images/cosine_similarity_comparison.png" alt="Cosine Similarity Comparison" class="blend-img-background" style="width: 48%;"/>
+        <img src="static/images/attnmap.png" alt="Cross Attention Map Visualization" class="blend-img-background" style="width: 48%;"/>
+      </div>
+      <div class="level-set has-text-justified">
+        <p>
+          For the four similar prompts (``{} in the desert''), we show the cosine similarity between the output embeddings of each token (left), and the cross-attention map visualization of each token (right). Replacing ``dog'' with ``puppy'' or ``cat'' results in similar output embeddings and attention maps for other tokens. In contrast, using the overfitted S<sup>*</sup> by Textual Inversion significantly alters the output embeddings and attention maps for other tokens. 
+        </p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 
 
